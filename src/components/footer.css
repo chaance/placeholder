@@ -1,0 +1,25 @@
+.Footer__text {
+    margin: 0;
+}
+
+.Footer__link {
+    display: flex;
+}
+
+.Footer__socialMenu {
+    margin: 1rem 0 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.Footer__item {
+    margin: 0 0.5rem;
+    padding: 0;
+}
+
+.Footer__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}

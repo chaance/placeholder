@@ -1,42 +1,46 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React from 'react';
+import './header.css';
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header className="Header">
+    <div className="Header__card">
+      <Image className="Header__image" />
+      <h1 className="Header__heading">{siteTitle}</h1>
     </div>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;
+
+export const Image = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "chance.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <Img
+      alt="Chance Strickland headshot"
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      {...props}
+    />
+  );
+};

@@ -1,8 +1,15 @@
+const config = {
+  siteTitle: 'Chance the Developer',
+  siteTitleAlt: 'A web developer who occasionally podcasts.',
+  siteTitleShort: 'Chance the Dev',
+  siteDescription: `Web developer, designer, and general dabbler in things. Welcome to my corner of the internet.`,
+};
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    author: '@chancethedev',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,17 +25,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        start_url: '/',
+        background_color: '#1f1f1f',
+        theme_color: '#558ca3',
+        display: 'standalone',
+        icons: [
+          {
+            src: '/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
-}
+};

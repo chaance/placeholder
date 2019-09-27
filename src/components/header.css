@@ -1,0 +1,31 @@
+.Header {
+}
+
+.Header__card {
+  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Header__image {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.Header__heading {
+  margin: 0;
+  max-width: 12.5rem;
+  line-height: 1.05;
+}
+
+@media (min-width: 40em) {
+  .Header__heading {
+    max-width: none;
+  }
+}
