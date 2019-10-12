@@ -26,7 +26,7 @@ export default Header;
 export const Image = props => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "chance.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "chances.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid

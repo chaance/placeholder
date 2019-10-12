@@ -4,6 +4,12 @@
 
 .Footer__link {
     display: flex;
+    color: var(--color-black);
+}
+
+.Footer__link:hover,
+.Footer__link:focus {
+    color: var(--color-accent);
 }
 
 .Footer__socialMenu {
