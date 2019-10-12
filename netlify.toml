@@ -5,3 +5,11 @@
 [[redirects]]
   from = "/wcus-feedback"
   to = "https://forms.gle/QPWyS5ssNRQTsDiP6"
+
+[[redirects]]
+  from = "/wcus-demo"
+  to = "https://github.com/chancestrickland/wcus-demo"
+
+[[redirects]]
+  from = "/wcus-demo-headless"
+  to = "https://github.com/chancestrickland/wcus-demo-headless"
