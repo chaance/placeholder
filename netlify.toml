@@ -1,3 +1,7 @@
 [[redirects]]
   from = "/ama"
   to = "https://github.com/chancestrickland/ama"
+
+[[redirects]]
+  from = "/wcus-feedback"
+  to = "https://forms.gle/QPWyS5ssNRQTsDiP6"
